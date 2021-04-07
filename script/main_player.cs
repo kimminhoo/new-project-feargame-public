@@ -8,9 +8,13 @@ public class main_player : MonoBehaviour
     public GameObject Mgii;
     public GameObject a;
 
+    public Animator Player_main;
+
     public int mgimax = 30;
 
     public float jump = 1.5f;
+
+    public float move = 1f;
 
     void Start()
     {
@@ -18,6 +22,7 @@ public class main_player : MonoBehaviour
     }
     void Update()
     {
+
         if (Input.GetKeyDown("a"))
         {
             //Mgi.newwObject(Mgii);
@@ -73,6 +78,13 @@ public class main_player : MonoBehaviour
     {
         mgimax = 30;
     }
+
+    public void OnClick()
+    {
+        Debug.Log("클릭");
+        Player_main.SetBool("run", true);
+    }
+
 }
 
 /*
